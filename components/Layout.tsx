@@ -2,8 +2,14 @@ import styles from '../styles/Layout.module.css'
 import Nav from './Nav'
 import Header from './Header'
 import Meta from './Meta'
+import { ReactNode } from 'react'
 
-const Layout = ({children}) => {
+interface IProps {
+    children: ReactNode;
+    // any other props that come into the component
+}
+
+const Layout = ({children}: IProps) => {
     return (
         <>
         <Meta />

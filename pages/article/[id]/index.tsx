@@ -2,8 +2,11 @@ import {useRouter} from 'next/router'
 import Link from 'next/link'
 import { server } from '../../../config'
 import Meta from '../../../components/Meta'
+import { ArticleProps, IArticleType } from '../../../data'
+import { GetStaticProps, GetStaticPaths } from 'next'
 
-const article = ({article}) => {
+
+const article = ({article}: ArticleProps) => {
 
     // const router = useRouter()
     // const {id} = router.query
@@ -20,8 +23,8 @@ const article = ({article}) => {
 }
 
 
-export const getStaticProps = async (context) => {
-    const res = await fetch(`${server}/api/articles/${context.params.id}`)
+export const getStaticProps: GetStaticProps = async (context) => {
+    const res = await fetch(`${server}/api/articles/${context.params?.id}`)
     const article = await res.json()
 
     return {
@@ -34,10 +37,10 @@ export const getStaticProps = async (context) => {
 
 // using api routes
 // If you export an async function called getStaticPaths from a page that uses dynamic routes, Next.js will statically pre-render all the paths specified by getStaticPaths.
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths  = async () => {
 
     const res = await fetch(`${server}/api/articles`)
-    const articles = await res.json()
+    const articles: IArticleType[] = await res.json()
 
     const ids = articles.map(article => article.id)
     const paths = ids.map(id => ( { params: { id: id.toString() } } ))
@@ -49,8 +52,9 @@ export const getStaticPaths = async () => {
 }
 
 
-
-
+//fallback: true --> if(router.isFallback){ return <div>로딩중...</div> }
+//이런식으로 커스터마이징 할 수 있다.
+//로딩이 끝나고 에러메시지가 뜬다.
 
 
 

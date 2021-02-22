@@ -1,7 +1,9 @@
 import ArticleList from '../components/ArticleList'
 import { server } from '../config/index'
+import { ArticlesProps, IArticleType } from '../data'
+import { GetStaticProps } from 'next'
 
-export default function Home({articles}) {
+export default function Home({articles}: ArticlesProps) {
   // console.log(articles)
   return (
     <>
@@ -10,10 +12,10 @@ export default function Home({articles}) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
 
   const res = await fetch(`${server}/api/articles`);
-  const articles = await res.json();
+  const articles: IArticleType[] = await res.json();
 
   return {
     props: {

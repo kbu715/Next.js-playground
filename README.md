@@ -44,3 +44,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 If we delete everything except for the out folder, this static website still going to work.
 
 How fast!!! this is because its all pre-fetched and we dynamically generated all of those paths
+
+
+
+---------------------------------
+
+## NEXTjs with Typescript
+

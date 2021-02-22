@@ -1,4 +1,25 @@
-export const articles = [
+export interface IArticleType {
+  id: string;
+  title: string;
+  excerpt: string;
+  body: string;
+}
+
+export interface ArticleProps {
+  article: IArticleType;
+}
+
+export interface ArticlesProps {
+  articles: IArticleType[];
+}
+
+export interface MetaProps { 
+  title: string; 
+  keywords: string; 
+  description: string; 
+}
+
+export const articles: IArticleType[] = [
     {
       id: '1',
       title: 'GitHub introduces dark mode and auto-merge pull request',

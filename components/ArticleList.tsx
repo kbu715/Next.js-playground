@@ -1,8 +1,9 @@
 
 import articleStyles from '../styles/Article.module.css'
 import ArticleItem from './ArticleItem'
+import { ArticlesProps } from '../data'
 
-const ArticleList = ({articles}) => {
+const ArticleList = ({articles}: ArticlesProps) => {
     return (
         <div className={articleStyles.grid}>
             {articles.map(article => (

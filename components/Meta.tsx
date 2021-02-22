@@ -1,6 +1,6 @@
 import Head from 'next/head'
-
-const Meta = ({ title, keywords, description }) => {
+import { MetaProps } from '../data'
+const Meta = ({ title, keywords, description }: MetaProps) => {
   return (
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
