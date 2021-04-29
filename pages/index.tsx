@@ -2,12 +2,22 @@ import ArticleList from '../components/ArticleList'
 import { server } from '../config/index'
 import { ArticlesProps, IArticleType } from '../data'
 import { GetStaticProps } from 'next'
+import { useContext } from 'react';
+import ClickContext from '../context/click';
 
 export default function Home({articles}: ArticlesProps) {
   // console.log(articles)
+
+  const [clickAmount, increment] = useContext(ClickContext);
+
   return (
     <>
     <ArticleList articles={articles}/>
+    You clicked the button <strong>{clickAmount}</strong> times.
+    <em>This page is landing.</em>
+      <button onClick={increment}>
+        Click me!
+      </button>
     </>
   )
 }

@@ -1,12 +1,16 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
 import { AppProps } from 'next/app'
+import { ClickProvider } from '../context/click'
 
 function MyApp({ Component, pageProps }: AppProps) {
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ClickProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ClickProvider>
     )
 }
 
