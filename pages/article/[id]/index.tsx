@@ -24,6 +24,7 @@ const article = ({article}: ArticleProps) => {
 
 
 export const getStaticProps: GetStaticProps = async (context) => {
+    console.log('context', context);
     const res = await fetch(`${server}/api/articles/${context.params?.id}`)
     const article = await res.json()
 
