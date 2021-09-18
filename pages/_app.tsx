@@ -5,15 +5,24 @@ import { ClickProvider } from '../context/click'
 import { ThemeProvider } from 'styled-components'
 import { useState } from 'react'
 import { darkTheme, GlobalStyles, lightTheme } from '../my-theme'
+import { useDarkMode } from '../hooks/useDarkMode'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const [theme, setTheme] = useState<string>('light');
+  const { theme, setLightTheme, setDarkTheme } = useDarkMode();
+
   const toggleTheme = () => {
-    theme == 'light' ? setTheme('dark') : setTheme('light')
+    // theme == 'light' ? setDarkTheme() : setLightTheme();
+    if (theme === lightTheme) {
+      setDarkTheme();
+    } else {
+      setLightTheme();
+    }
   }
+
+
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === lightTheme ? darkTheme : lightTheme}>
       <ClickProvider>
       <GlobalStyles />
         <Layout>
