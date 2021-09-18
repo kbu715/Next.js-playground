@@ -51,3 +51,4 @@ How fast!!! this is because its all pre-fetched and we dynamically generated all
 
 ## NEXTjs with Typescript
 
+## Git config local test
