@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 10px;
+  color: #fff;
+  background: #000;
+
+  & ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      margin-right: 10px;
+
+      & a {
+        margin: 5px 15px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

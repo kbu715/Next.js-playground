@@ -1,18 +1,18 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0 0.5rem;
 }
 
 .main {
-  padding: 5rem 0;
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  padding: 5rem 0;
   font-size: 1.25rem;
 }
