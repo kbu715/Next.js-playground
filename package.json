@@ -14,7 +14,14 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "^1.41.1",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recess-order": "^2.5.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-no-unsupported-browser-features": "^5.0.2",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "stylelint-scss": "^3.21.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
