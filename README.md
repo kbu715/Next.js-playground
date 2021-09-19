@@ -33,11 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
-
-
-
------------------------------------------------
+---
 
 ## Export static website
 
@@ -45,6 +41,6 @@ If we delete everything except for the out folder, this static website still goi
 
 How fast!!! this is because its all pre-fetched and we dynamically generated all of those paths
 
+---
 
-
----------------------------------
+git commit -am "new message" test
