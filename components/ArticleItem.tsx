@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import articleStyles from '../styles/Article.module.css'
-import { ArticleProps } from '../data'
+import Link from 'next/link';
+import articleStyles from '../styles/modules/Article.module.scss';
+import { ArticleProps } from '../data';
 
 const ArticleItem = ({ article }: ArticleProps) => {
   return (
@@ -10,7 +10,7 @@ const ArticleItem = ({ article }: ArticleProps) => {
         <p>{article.excerpt}</p>
       </a>
     </Link>
-  )
-}
+  );
+};
 
-export default ArticleItem
+export default ArticleItem;

@@ -1,29 +1,26 @@
-import ArticleList from '../components/ArticleList'
-import { server } from '../config/index'
-import { ArticlesProps, IArticleType } from '../data'
-import { GetStaticProps } from 'next'
+import ArticleList from '../components/ArticleList';
+import { server } from '../config/index';
+import { ArticlesProps, IArticleType } from '../data';
+import { GetStaticProps } from 'next';
 
-export default function Home({articles}: ArticlesProps) {
-
+export default function Home({ articles }: ArticlesProps) {
   return (
     <>
-      <ArticleList articles={articles}/>
+      <ArticleList articles={articles} />
     </>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-
   const res = await fetch(`${server}/api/articles`);
   const articles: IArticleType[] = await res.json();
 
   return {
     props: {
-      articles
-    }
-  }
-}
-
+      articles,
+    },
+  };
+};
 
 /* Next.js will pre-render this page at build time using the props returned by getStaticProps. */
 // export const getStaticProps = async () => {

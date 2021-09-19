@@ -13,12 +13,12 @@ import { createGlobalStyle, DefaultTheme } from 'styled-components';
 export const lightTheme: DefaultTheme = {
   body: '#FFF',
   text: '#363537',
-}
+};
 
 export const darkTheme: DefaultTheme = {
   body: '#363537',
   text: '#FAFAFA',
-}
+};
 
 export const GlobalStyles = createGlobalStyle`
 * {
@@ -29,13 +29,13 @@ export const GlobalStyles = createGlobalStyle`
 }
   
 body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
-    font-family: 'Tahoma', sans-serif;
-    transition: all 0.50s linear;
+  font-family: 'Tahoma', sans-serif;
+  color: ${({ theme }) => theme.text};
+  background: ${({ theme }) => theme.body};
+  transition: all 500ms linear;
 }
 
-  h1 {
+h1 {
   margin: 0;
 }
 
@@ -75,4 +75,4 @@ ol {
 address {
   font-style: normal;
 }
-`
+`;
