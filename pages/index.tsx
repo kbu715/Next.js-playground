@@ -2,11 +2,13 @@ import ArticleList from '../components/ArticleList';
 import { server } from '../config/index';
 import { ArticlesProps, IArticleType } from '../data';
 import { GetStaticProps } from 'next';
+import Image from 'next/image';
 
 export default function Home({ articles }: ArticlesProps) {
   return (
     <>
       <ArticleList articles={articles} />
+      <Image src="/assets/3.jpg" alt="main" width="500" height="300" />
     </>
   );
 }
